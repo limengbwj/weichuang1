@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta  name="viewport " content="width=device-">
+    <title>星巴克</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+          list-style: none;
+            float: left;
+            margin-left: 20px;
+        }
+        #header{
+            width: 30%;
+            position: fixed;
+            border-right: 1px solid #e5e5e5;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+        }
+        #primary{
+            position: absolute;
+            margin-top: 25px;
+            margin-left: 70px;
+        }
+        #primary li{
+            font-weight: bold;
+         }
+        #header img{
+            float: left;
+            position: absolute;
+            margin-left: 20px;
+            margin-top: 20px;
+            height: 36px;
+        }
+
+        #display_1 span{
+            position: absolute;
+            margin-top: 300px ;
+            font-size: 26px;
+            font-weight: bold;
+            margin-left: 80px;
+        }
+        #footer{
+            position: absolute;
+            margin-top: 310px;
+        }
+        #footer img{
+            margin-top: 40px;
+            margin-left: 80px;
+        }
+        #footer p{
+            cursor: pointer;
+            color: #00a862;
+            margin-top: 40px;
+            margin-left: 120px;
+            font-size: 18px;
+        }
+        #footer button{
+            display: inline-block;
+            margin-left: 200px;
+            color: #00a862;
+            font-size: 18px;
+            position: absolute;
+            top: 40px;
+            width: 100px;
+            cursor: pointer;
+        }
+        #banner img{
+            float: right;
+            width: 70%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <a href=""><img src="img/logo.svg" alt=""></a>
+        <div id="primary">
+            <ul>
+                <li class="stores">门店</li>
+                <li class="account">我的帐户</li>
+                <li class="menu">菜单</li>
+            </ul>
+        </div>
+        <div id="display_1">
+            <span>心情惬意，来杯咖啡吧 ☕</span>
+        </div>
+        <div id="footer">
+            <img src="img/icon-account.svg" alt="">
+            <p>登陆</p>
+            <button>注册</button>
+        </div>
+    </div>
+    <div id="banner">
+        <img src="img/kv-mooncake.jpg" alt="">
+    </div>
+</body>
+</html>

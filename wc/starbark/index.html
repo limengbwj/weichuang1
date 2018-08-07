@@ -10,99 +10,318 @@
             margin: 0;
         }
         li{
-          list-style: none;
+           list-style: none;
             float: left;
             margin-left: 20px;
         }
-        #header{
-            width: 30%;
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        .nav {
             position: fixed;
-            border-right: 1px solid #e5e5e5;
+            width: 30%;
             top: 0;
             bottom: 0;
             left: 0;
-            background: #fff;
+            background: #ffffff;
         }
-        #primary{
-            position: absolute;
-            margin-top: 25px;
-            margin-left: 70px;
-        }
-        #primary li{
-            font-weight: bold;
-         }
-        #header img{
-            float: left;
-            position: absolute;
-            margin-left: 20px;
-            margin-top: 20px;
+
+        .logo img, .logo {
+            width: 36px;
             height: 36px;
         }
 
-        #display_1 span{
-            position: absolute;
-            margin-top: 300px ;
-            font-size: 26px;
+        .logo img {
+            vertical-align: middle;
+        }
+
+        .primary {
+            margin-left: 20px;
+        }
+
+        .primary li {
+            float: left;
+            margin-right: 5px;
             font-weight: bold;
+        }
+
+        .primary li a {
+            color: #000;
+        }
+
+        .logo, .primary {
+            float: left;
+        }
+
+        .nav-menu {
+            float: right;
+        }
+
+        .header {
+            height: 48px;
+            padding: 24px;
+            line-height: 48px;
+        }
+
+        .overlay {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .actived {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nav-close {
+            float: right;
+        }
+
+        .overlay .body {
+            transform: scale(1.2);
+            transition: transform .1s ease;
+        }
+        .body p{
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 260px;
             margin-left: 80px;
         }
-        #footer{
-            position: absolute;
-            margin-top: 310px;
-        }
-        #footer img{
-            margin-top: 58px;
+        .body img{
+            margin-top: 20px;
             margin-left: 80px;
         }
-        #footer p{
-            cursor: pointer;
+        .body span{
             color: #00a862;
-            margin-top: 60px;
-            margin-left: 130px;
-            font-size: 18px;
-            /*position: absolute;*/
-        }
-        #footer button{
-            display: inline-block;
-            margin-left: 200px;
-            color: #00a862;
-            font-size: 18px;
+            margin-top: 20px;
             position: absolute;
-            top: 60px;
-            width: 100px;
-            cursor: pointer;
+            margin-left: 12px;
+        }
+        .body button{
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 80px;
+            font-size: 20px;
+            width: 50px;
+            color: #00a862;
+            /*border-radius:;*/
             background: #fff;
         }
-        #banner img{
-            float: right;
-            width: 70%;
+        .body li{
+            float: left;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 40px;
+            margin-top: 60px;
         }
+
+        .overlay.actived .body {
+            transform: scale(1);
+        }
+
+        .content {
+            margin-left: 30%;
+        }
+
+        .slide {
+            overflow: hidden;
+        }
+
+        .slide-container {
+            /*width: 2688px;*/
+            transition: transform .8s ease;
+        }
+
+        .slide-container .slide-item {
+            float: left;
+            width: 896px;
+        }
+
+        .slide-container .slide-item img {
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .nav {
+                right: 0;
+                height: 182px;
+                width: 100%;
+            }
+
+            .content {
+                margin-left: 0;
+                margin-top: 182px;
+            }
+
+            .slide {
+                width: 100%;
+            }
+
+            .slide-container {
+                width: 400%;
+            }
+
+            .slide-container .item {
+                width: 25%;
+            }
+
+        }
+
+        @media (max-width: 640px) {
+            .nav .header {
+                /*visibility: hidden;*/
+                display: none;
+            }
+        }
+
 
 
     </style>
 </head>
 <body>
-    <div id="header">
-        <a href=""><img src="img/logo.svg" alt=""></a>
-        <div id="primary">
-            <ul>
-                <li class="stores">门店</li>
-                <li class="account">我的帐户</li>
-                <li class="menu">菜单</li>
+
+<div class="container">
+    <div class="nav">
+        <div class="header">
+            <a href="" class="logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <ul class="primary">
+                <li>
+                    <a href="">门店</a>
+                </li>
+                <li>
+                    <a href="">我的账户</a>
+                </li>
+                <li>
+                    <a href="">菜单</a>
+                </li>
             </ul>
+            <a href="" class="nav-menu">
+                <img src="img/icon-hamburger.svg" alt="">
+            </a>
         </div>
-        <div id="display_1">
-            <span>心情惬意，来杯咖啡吧 ☕</span>
-        </div>
-        <div id="footer">
+
+        <div class="body">
+            <p>心情惬意，来杯咖啡吧 ☕</p>
             <img src="img/icon-account.svg" alt="">
-            <p>登陆</p>
+            <span>登陆</span>
             <button>注册</button>
         </div>
     </div>
 
-    <div id="banner">
-        <img src="img/kv-mooncake.jpg" alt="">
+    <div class="nav overlay">
+        <div class="header">
+            <a href="" class="logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <a href="" class="nav-close">
+                <img src="img/icon-close.svg" alt="">
+            </a>
+        </div>
+        <div class="body">
+            <ul>
+                <li><a href="">门店</a></li>
+
+                <li><a href="">星享俱乐部</a></li>
+
+                <li><a href="">菜单</a></li>
+
+                <li><a href="">星巴克移动应用</a></li>
+
+                <li><a href="">星礼卡</a></li>
+
+                <li><a href="">星巴克甄选</a></li>
+
+                <li><a href="">咖啡星讲堂</a></li>
+
+                <li><a href="">上海烘焙工坊</a></li>
+
+                <li><a href="">关于星巴克</a></li>
+
+                <li><a href="">帮助中心</a></li>
+
+            </ul>
+        </div>
     </div>
+
+    <div class="content">
+        <div class="slide">
+            <div class="slide-container">
+                <div class="slide-item"><img src="img/kv-3.jpg" alt=""></div>
+                <div class="slide-item"><img src="img/kv-bev.jpg" alt=""></div>
+                <div class="slide-item"><img src="img/kv-mooncake.jpg" alt=""></div>
+                <div class="slide-item"><img src="img/kv-3.jpg" alt=""></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../jquery/jquery-1.12.4.js"></script>
+<script >
+    $(function () {
+        $('.nav-menu img').on('click', function () {
+            $('.overlay').addClass('actived');
+            return false;
+        });
+
+        $('.nav-close img').on('click', function () {
+            $('.overlay').removeClass('actived');
+            return false;
+        });
+
+        // 轮播图
+        var $Slide = $('.slide');
+        var clientW = $Slide.innerWidth();
+        $('.slide-container').css('width', function () {
+            return 4 * clientW;
+        });
+        $('.slide-container .slide-item').css({
+            width: clientW
+        });
+        var t;
+        window.onresize = function () {
+            clearTimeout(t);
+            t = setTimeout(function () {
+                clientW = $Slide.innerWidth();
+                $('.slide-container').css('width', function () {
+                    return 4 * clientW;
+                });
+                $('.slide-container .slide-item').css({
+                    width: clientW
+                });
+            }, 17);
+
+        };
+        var nowIndex = 1;
+
+        var speed = 1500;
+
+        var play = function () {
+            if (nowIndex == 4) {
+                nowIndex = 1;
+                $('.slide-container').css({
+                    transition: 'none',
+                    transform: 'translateX(0px)'
+                });
+                speed = 0;
+            } else {
+                $('.slide-container').css({
+                    transition: 'transform .8s ease',
+                    transform: 'translateX(-' + clientW * (nowIndex++) + 'px)'
+                });
+                speed = 1500;
+            }
+            clearTimeout(timer);
+            timer = setTimeout(play, speed);
+        };
+        var timer = setTimeout(play, speed);
+
+
+    });
+</script>
 </body>
 </html>
